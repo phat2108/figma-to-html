@@ -483,7 +483,7 @@ a {
   padding: 96px 0;
   background: #fffcf4;
 }
-.blogs .blog-top .heading-lv2 {
+.blogs .blog-top {
   text-align: center;
 }
 .blogs .blog-top .desc {
@@ -494,12 +494,14 @@ a {
   line-height: 1.75;
 }
 .blogs .blog-list {
+  overflow: hidden;
   gap: 30px;
   display: flex;
   margin-top: 55px;
 }
 .blogs .item {
-  width: 33.33%;
+  flex-shrink: 0;
+  width: calc(33.33% - 20px);
   border-radius: 16px;
   background: #fff;
 }
@@ -552,7 +554,25 @@ a {
 }
 .blogs .item .btn {
   margin-top: 12px;
+  font-size: 1.4rem;
 }
 .blogs .item .btn:hover {
   background: var(--primary-color);
+}
+.blogs .dots {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin-top: 38px;
+}
+.blogs .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #5f5b53;
+  cursor: pointer;
+}
+.blogs .dot.active {
+  background: var(--primary-color);
+  cursor: default;
 }
